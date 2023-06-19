@@ -1,0 +1,5 @@
+[34m@astrojs/mdx:build: [0mcache hit, replaying output [2m8f7758540a171891[0m
+[34m@astrojs/mdx:build: [0m
+[34m@astrojs/mdx:build: [0m> @astrojs/mdx@0.19.0 build /home/runner/work/astro/astro/packages/integrations/mdx
+[34m@astrojs/mdx:build: [0m> astro-scripts build "src/**/*.ts" && tsc
+[34m@astrojs/mdx:build: [0m
