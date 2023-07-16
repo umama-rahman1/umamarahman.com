@@ -16,21 +16,17 @@ function setLoadingState(isLoading: boolean) {
 }
 
 async function submitForm(formValues: any) {
-  const res = await fetch("https://formzen.io/api/forms/Eg4rQD8Fuv/submit", {
+  const res = await fetch("https://formsubmit.co/ajax/umamar@mun.ca", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      'Accept': 'application/json'
     },
     body: JSON.stringify({
-      data: {
         name: formValues.name,
         email: formValues.email,
         subject: formValues.subject,
         message: formValues.message,
-      },
-      mailSettings: {
-        replyTo: formValues.email
-      }
     })
   });
 
@@ -57,7 +53,7 @@ export function handleContactFormSubmit() {
       try {
         const data = await submitForm(formValues);
 
-        if (data.status === "success") {
+        if (data.success === "true") {
           successMessage.style.display = "block";
           contactForm.reset();
         } else {

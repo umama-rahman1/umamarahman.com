@@ -18,7 +18,7 @@ const end = endDate ? new Date(endDate) : new Date();
 
 // Initial calculations for year and month differences
 let yearDifference = end.getFullYear() - start.getFullYear();
-let monthDifference = end.getMonth() - start.getMonth();
+let monthDifference = end.getMonth() - start.getMonth() + 1;
 
 // Check if end date is earlier in the year than start date
 const isEndDateEarlierInYear = monthDifference < 0 || (monthDifference === 0 && end.getDate() < start.getDate());

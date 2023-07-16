@@ -45,6 +45,27 @@ const buzzwords = [
   "TailwindCSS",
   "TypeScript",
   "WordPress",
+  "MongoDB",
+  "RDS",
+  "Aurora",
+  "Athena",
+  "PyXll",
+  "Java",
+  "Spring",
+  "AngularJS",
+  "Java",
+  "IBM UrbanCode Deploy",
+  "Jenkins",
+  "JAMS",
+  "EKS",
+  "ALB",
+  "Confluence",
+  "SQL",
+  "ArgoCD",
+  "Kubernetes",
+  "Flask",
+  "EC2",
+  "Lambda"
 ];
 
 // Add tags that should be searched for buzzwords
