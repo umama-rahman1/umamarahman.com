@@ -21,5 +21,5 @@ export function greeting() {
   }
 
   // Between 12am and 4am when it doesn't feel right to say "Good morning"!
-  return "Hey there!";
+  return "Hello there!";
 }
