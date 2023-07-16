@@ -58,7 +58,14 @@ const buzzwords = [
   "Jenkins",
   "JAMS",
   "EKS",
-  "ALB"
+  "ALB",
+  "Confluence",
+  "SQL",
+  "ArgoCD",
+  "Kubernetes",
+  "Flask",
+  "EC2",
+  "Lambda"
 ];
 
 // Add tags that should be searched for buzzwords
