@@ -44,6 +44,29 @@ const starsCount = {
 
     <section class="projects">
       <PortfolioItem
+      isOpenSource
+      sourceCode="https://github.com/Mepha89/umamarahman.com"
+      githubStarsCount={starsCount.lukeliasi}
+      projectYear="2023"
+      title="My Portfolio umamarahman.com"
+      image="/images/lukeliasi-portfolio.png"
+      tags={[
+        "JavaScript",
+        "TypeScript",
+        "Astro",
+        "HTML",
+        "CSS",
+      ]}>
+      <p slot="subtitle">My portfolio website, the site you are looking at right now!</p>
+
+      <div slot="description">
+        <p>Built with the Astro framework, this website is optimized for speed and search engines, designed with recruiters and tech enthusiasts in mind to efficiently access information about my skills, experience, and projects.</p>
+        <p>The project emphasizes simplicity, utilizing reusable components and minimal third-party libraries to streamline development and reduce maintenance.</p>
+        <p>Embracing transparency and collaboration, the website's codebase is fully open-source, allowing others to review my code and draw inspiration. The growing number of forks and stars on GitHub highlights the project's adaptability and the value it brings to the developer community.</p>
+      </div>
+    </PortfolioItem>
+
+      <PortfolioItem
         isOpenSource
         sourceCode="https://github.com/lukeliasi/lukeliasi.com"
         githubStarsCount={starsCount.lukeliasi}
