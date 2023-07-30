@@ -28,3 +28,4 @@ export type Skills =
   | "Tailwind CSS"
   | "TypeScript"
   | "WordPress"
+  | "Java"
