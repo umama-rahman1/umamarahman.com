@@ -44,6 +44,29 @@ const starsCount = {
 
     <section class="projects">
       <PortfolioItem
+      isOpenSource
+      sourceCode="https://github.com/Mepha89/umamarahman.com"
+      githubStarsCount={starsCount.lukeliasi}
+      projectYear="2023"
+      title="My Portfolio umamarahman.com"
+      image="/images/lukeliasi-portfolio.png"
+      tags={[
+        "JavaScript",
+        "TypeScript",
+        "Astro",
+        "HTML",
+        "CSS",
+      ]}>
+      <p slot="subtitle">My portfolio website, the site you are looking at right now!</p>
+
+      <div slot="description">
+        <p>Built with the Astro framework, this website is optimized for speed and search engines, designed with recruiters and tech enthusiasts in mind to efficiently access information about my skills, experience, and projects.</p>
+        <p>The project emphasizes simplicity, utilizing reusable components and minimal third-party libraries to streamline development and reduce maintenance.</p>
+        <p>Embracing transparency and collaboration, the website's codebase is fully open-source, allowing others to review my code and draw inspiration. The growing number of forks and stars on GitHub highlights the project's adaptability and the value it brings to the developer community.</p>
+      </div>
+    </PortfolioItem>
+
+      <PortfolioItem
         isOpenSource
         sourceCode="https://github.com/lukeliasi/lukeliasi.com"
         githubStarsCount={starsCount.lukeliasi}
@@ -178,19 +201,17 @@ const starsCount = {
 
       <PortfolioItem
         projectYear="2015"
-        title="Windsor ENT"
-        image="/images/windsorent-portfolio.png"
-        projectLink="https://www.windsor-ent.co.uk"
+        title="Java Programming MOOC"
+        image="/images/Java-MOOC.png"
+        projectLink="https://github.com/Mepha89/Java-Programming-1-2019-MOOC"
         tags={[
-          "HTML",
-          "CSS",
-          "JavaScript",
+          "Java"
         ]}>
-        <p slot="subtitle">Website for a group of ear, nose and throat surgeons built using HTML, CSS, and JavaScript.</p>
+        <p slot="subtitle">Learn the basics of computer programming, along with algorithms and object-oriented programming through the Java programming language.</p>
 
         <div slot="description">
-          <p>It is fully responsive, ensuring that the content is easily accessible on any device. The static site is optimised for speed and search engines, providing a seamless user experience and improving visibility for potential patients. </p>
-          <p>The website includes detailed information about the surgeons' qualifications, services offered, and contact information. The site is easy to navigate, making it easy for patients to find the information they need quickly and efficiently.</p>
+          <p>This is the first course in University of Helsinki computer science learning track, and we use industry-grade tooling from day one. As such, the course is about programming in a real integrated development environment (IDE) instead of a browser or an educational IDE. </p>
+          <p>The course is split up into two individual courses: Java Programming I and Java Programming II. Each course consists of seven parts, each with its own exercise set. Completing a single part takes approximately 5-20 hours, and we recommend reserving at least 10 hours per part, depending on prior skills with computers</p>
         </div>
       </PortfolioItem>
     </section>
