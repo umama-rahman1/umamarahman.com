@@ -23,10 +23,6 @@ const canonical = Astro.props.canonical || undefined;
 const documentTitle = Astro.props.documentTitle || title;
 const documentDescription = Astro.props.documentDescription || defaultDesc;
 const ogimage = Astro.props.ogimage || site_url + "images/ogimage.png";
-
-function shouldLoadAnalytics() {
-  return import.meta.env.MODE === 'production';
-}
 ---
 
 <head>
@@ -41,8 +37,6 @@ function shouldLoadAnalytics() {
   <meta property="og:type" content="website" />
   <meta property="og:url" content={site_url + (canonical || "")} />
   <meta property="og:image" content={ogimage} />
-
-  {shouldLoadAnalytics()}
 </head>
 
 <style lang="scss">
