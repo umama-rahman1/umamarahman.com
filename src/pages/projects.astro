@@ -1,7 +1,10 @@
 ---
-import DefaultLayout from '../components/LayoutDefault.astro';
-import PortfolioItem from '../components/PortfolioItem.astro';
-import { writeToLocalDataFile, readLocalDataFile } from '../js/localDataManager';
+import DefaultLayout from "../components/LayoutDefault.astro";
+import PortfolioItem from "../components/PortfolioItem.astro";
+import {
+  writeToLocalDataFile,
+  readLocalDataFile,
+} from "../js/localDataManager";
 
 // Fetch stars count from GitHub
 async function getRepoStars(repo: string) {
@@ -14,7 +17,10 @@ async function getRepoStars(repo: string) {
 
     if (stars) {
       // Cache stars count
-      await writeToLocalDataFile("openSourceProjectStars", { ...existingCache, [repo]: stars });
+      await writeToLocalDataFile("openSourceProjectStars", {
+        ...existingCache,
+        [repo]: stars,
+      });
 
       return stars;
     } else {
@@ -24,7 +30,7 @@ async function getRepoStars(repo: string) {
 
       return valueFromCache || undefined;
     }
-  } catch(error) {
+  } catch (error) {
     console.log(error);
   }
 }
@@ -32,39 +38,49 @@ async function getRepoStars(repo: string) {
 const starsCount = {
   binanceBot: await getRepoStars("lukeliasi/binance-dca-bot"),
   lukeliasi: await getRepoStars("lukeliasi/lukeliasi.com"),
-}
+};
 ---
 
-<DefaultLayout documentTitle="Projects" documentDescription="Welcome to my portfolio, showcasing a selection of projects I've worked on.">
+<DefaultLayout
+  documentTitle="Projects"
+  documentDescription="Welcome to my portfolio, showcasing a selection of projects I've worked on."
+>
   <div class="container">
     <h1 class="main-heading text-swipe-animation">Projects</h1>
     <div class="intro">
-      <p>Welcome to my portfolio, showcasing a selection of side projects I've worked on.</p>
+      <p>
+        Welcome to my portfolio, showcasing a selection of side projects I've
+        worked on.
+      </p>
     </div>
 
     <section class="projects">
       <PortfolioItem
-      isOpenSource
-      sourceCode="https://github.com/Mepha89/umamarahman.com"
-      githubStarsCount={starsCount.lukeliasi}
-      projectYear="2023"
-      title="My Portfolio umamarahman.com"
-      image="/images/lukeliasi-portfolio.png"
-      tags={[
-        "JavaScript",
-        "TypeScript",
-        "Astro",
-        "HTML",
-        "CSS",
-      ]}>
-      <p slot="subtitle">My portfolio website, the site you are looking at right now!</p>
+        isOpenSource
+        sourceCode="https://github.com/Mepha89/umamarahman.com"
+        projectYear="2023"
+        title="My Portfolio umamarahman.com"
+        image="/images/portfolio.png"
+        tags={["JavaScript", "TypeScript", "Astro", "HTML", "CSS"]}
+      >
+        <p slot="subtitle">
+          My portfolio website, the site you are looking at right now!
+        </p>
 
-      <div slot="description">
-        <p>Built with the Astro framework, this website is optimized for speed and search engines, designed with recruiters and tech enthusiasts in mind to efficiently access information about my skills, experience, and projects.</p>
-        <p>The project emphasizes simplicity, utilizing reusable components and minimal third-party libraries to streamline development and reduce maintenance.</p>
-        <p>Embracing transparency and collaboration, the website's codebase is fully open-source, allowing others to review my code and draw inspiration. The growing number of forks and stars on GitHub highlights the project's adaptability and the value it brings to the developer community.</p>
-      </div>
-    </PortfolioItem>
+        <div slot="description">
+          <p>
+            This website, built on the Astro framework, is designed for speed
+            and search engines. It's tailored for recruiters and tech
+            enthusiasts, offering easy access to information about my skills,
+            experience, and projects.
+          </p>
+          <p>
+            The project prioritizes simplicity by employing reusable components
+            and minimizing reliance on third-party libraries. This approach
+            streamlines development and lowers maintenance efforts.
+          </p>
+        </div>
+      </PortfolioItem>
 
       <PortfolioItem
         isOpenSource
@@ -73,19 +89,31 @@ const starsCount = {
         projectYear="2023"
         title="My Portfolio lukeliasi.com"
         image="/images/lukeliasi-portfolio.png"
-        tags={[
-          "JavaScript",
-          "TypeScript",
-          "Astro",
-          "HTML",
-          "CSS",
-        ]}>
-        <p slot="subtitle">My portfolio website, the site you are looking at right now!</p>
+        tags={["JavaScript", "TypeScript", "Astro", "HTML", "CSS"]}
+      >
+        <p slot="subtitle">
+          My portfolio website, the site you are looking at right now!
+        </p>
 
         <div slot="description">
-          <p>Built with the Astro framework, this website is optimized for speed and search engines, designed with recruiters and tech enthusiasts in mind to efficiently access information about my skills, experience, and projects.</p>
-          <p>The project emphasizes simplicity, utilizing reusable components and minimal third-party libraries to streamline development and reduce maintenance.</p>
-          <p>Embracing transparency and collaboration, the website's codebase is fully open-source, allowing others to review my code and draw inspiration. The growing number of forks and stars on GitHub highlights the project's adaptability and the value it brings to the developer community.</p>
+          <p>
+            Built with the Astro framework, this website is optimized for speed
+            and search engines, designed with recruiters and tech enthusiasts in
+            mind to efficiently access information about my skills, experience,
+            and projects.
+          </p>
+          <p>
+            The project emphasizes simplicity, utilizing reusable components and
+            minimal third-party libraries to streamline development and reduce
+            maintenance.
+          </p>
+          <p>
+            Embracing transparency and collaboration, the website's codebase is
+            fully open-source, allowing others to review my code and draw
+            inspiration. The growing number of forks and stars on GitHub
+            highlights the project's adaptability and the value it brings to the
+            developer community.
+          </p>
         </div>
       </PortfolioItem>
 
@@ -100,29 +128,55 @@ const starsCount = {
           "PostgreSQL",
           "HTML",
           "CSS",
-          "Tailwind CSS"
-        ]}>
-        <p slot="subtitle">Web appllication built using Next.js and TypeScript for frontend, Python for backend, and SQLite for database.</p>
+          "Tailwind CSS",
+        ]}
+      >
+        <p slot="subtitle">
+          Web appllication built using Next.js and TypeScript for frontend,
+          Python for backend, and SQLite for database.
+        </p>
 
         <div slot="description">
-          <p>Taking inspriation (and frustration) from the Government of NL's ferry services, our group has decided to create a ferry reservation web application. It allows users to view the ferry schedule much easier and enables the additional reservation functionality.</p>
-          <p>The app allows users to search for their desired crossing, make a booking, check the status of their booking, cancel their booking. The app will also send email confirmation when the user makes a booking.</p>
+          <p>
+            Taking inspriation (and frustration) from the Government of NL's
+            ferry services, our group has decided to create a ferry reservation
+            web application. It allows users to view the ferry schedule much
+            easier and enables the additional reservation functionality.
+          </p>
+          <p>
+            The app allows users to search for their desired crossing, make a
+            booking, check the status of their booking, cancel their booking.
+            The app will also send email confirmation when the user makes a
+            booking.
+          </p>
         </div>
       </PortfolioItem>
 
       <PortfolioItem
-      projectYear="2023"
+        projectYear="2023"
         sourceCode="https://github.com/Mepha89/Tic-Tac-Toe-Java"
         title="Tic-Tac-Toe CLI - (Java)"
         image="/images/Tic-Tac-Toe-java.png"
-        tags={[
-          "Java"
-        ]}>
-        <p slot="subtitle">Tic-Tac-Toe CLI Object-Oriented Java game made for ECE-5010 using SOLID principles.</p>
+        tags={["Java"]}
+      >
+        <p slot="subtitle">
+          Tic-Tac-Toe CLI Object-Oriented Java game made for ECE-5010 using
+          SOLID principles.
+        </p>
 
         <div slot="description">
-          <p>The game includes an AI opponent with varying levels of difficulty (Dumb vs Smart). The AI employs intelligent strategies to analyze the board and make decisions, providing a challenging experience for players.</p>
-          <p>The game's design follows SOLID principles, ensuring a clean and modular codebase that is easy to understand, maintain, and extend. Each class has a single responsibility and is highly cohesive, leading to a more robust architecture.</p>
+          <p>
+            The game includes an AI opponent with varying levels of difficulty
+            (Dumb vs Smart). The AI employs intelligent strategies to analyze
+            the board and make decisions, providing a challenging experience for
+            players.
+          </p>
+          <p>
+            The game's design follows SOLID principles, ensuring a clean and
+            modular codebase that is easy to understand, maintain, and extend.
+            Each class has a single responsibility and is highly cohesive,
+            leading to a more robust architecture.
+          </p>
         </div>
       </PortfolioItem>
 
@@ -131,14 +185,26 @@ const starsCount = {
         title="E-Commerce CLI Appllication (C++)"
         image="/images/E-Commerce-CLI.png"
         sourceCode="https://github.com/Mepha89/E-Commerce-Cli-Project"
-        tags={[
-          "C++"
-        ]}>
-        <p slot="subtitle">C++ Application to implement Data Structures and Algorithms in a Command Line Application.</p>
+        tags={["C++"]}
+      >
+        <p slot="subtitle">
+          C++ Application to implement Data Structures and Algorithms in a
+          Command Line Application.
+        </p>
 
         <div slot="description">
-          <p>The project included using Linked List, Priority Queues and Heap to create inventory list, customer history. Functionality for automatic inventory reorder was set up, along with sorting inventory by expiry date.</p>
-          <p>The backend stored the customer and investory information in JSON file. The transactions and orders are executed by reading the JSON file, updating the data structures, and then writing the JSON file back to disk.</p>
+          <p>
+            The project included using Linked List, Priority Queues and Heap to
+            create inventory list, customer history. Functionality for automatic
+            inventory reorder was set up, along with sorting inventory by expiry
+            date.
+          </p>
+          <p>
+            The backend stored the customer and investory information in JSON
+            file. The transactions and orders are executed by reading the JSON
+            file, updating the data structures, and then writing the JSON file
+            back to disk.
+          </p>
         </div>
       </PortfolioItem>
 
@@ -147,14 +213,24 @@ const starsCount = {
         title="Bunny Shooter Game - (PyGame)"
         image="/images/bunny-shooter.png"
         sourceCode="https://github.com/Mepha89/Bunny-Shooter--Python-Game"
-        tags={[
-          "Python"
-        ]}>
-        <p slot="subtitle">Simple game called Bunnies and Badgers, where the hero, the bunny, has to defend a castle against an attacking horde of badgers.</p>
+        tags={["Python"]}
+      >
+        <p slot="subtitle">
+          Simple game called Bunnies and Badgers, where the hero, the bunny, has
+          to defend a castle against an attacking horde of badgers.
+        </p>
 
         <div slot="description">
-          <p>The game is a Python application that uses the PyGame library to create a simple game where a bunny defends a castle from an attacking horde of badgers. </p>
-          <p>The game includes features such as movement, shooting, and collision detection. It also includes a HUD that displays the bunny's health and the number of badgers remaining.</p>
+          <p>
+            The game is a Python application that uses the PyGame library to
+            create a simple game where a bunny defends a castle from an
+            attacking horde of badgers.
+          </p>
+          <p>
+            The game includes features such as movement, shooting, and collision
+            detection. It also includes a HUD that displays the bunny's health
+            and the number of badgers remaining.
+          </p>
         </div>
       </PortfolioItem>
 
@@ -162,14 +238,23 @@ const starsCount = {
         projectYear="2020"
         title="COVID-19 Screening Kit Project - (Python & Arduino)"
         image="/images/arduino-project.png"
-        tags={[
-          "Python"
-        ]}>
-        <p slot="subtitle">Intro to Python - Semester Project using Arduino Kit to make a COVID-19 Screening Test</p>
+        tags={["Python"]}
+      >
+        <p slot="subtitle">
+          Intro to Python - Semester Project using Arduino Kit to make a
+          COVID-19 Screening Test
+        </p>
 
         <div slot="description">
-          <p>Built using Python software and Arduino kit (button, LED screen, sensors) to create a system to screen for COVID-19 symptoms.</p>
-          <p>The project uses the teachings of the course content to create a system that combines software and hardware to make a solution to screen for COVID-19 symptoms.</p>
+          <p>
+            Built using Python software and Arduino kit (button, LED screen,
+            sensors) to create a system to screen for COVID-19 symptoms.
+          </p>
+          <p>
+            The project uses the teachings of the course content to create a
+            system that combines software and hardware to make a solution to
+            screen for COVID-19 symptoms.
+          </p>
         </div>
       </PortfolioItem>
 
@@ -178,14 +263,27 @@ const starsCount = {
         title="Java Programming MOOC"
         image="/images/Java-MOOC.png"
         sourceCode="https://github.com/Mepha89/Java-Programming-1-2019-MOOC"
-        tags={[
-          "Java"
-        ]}>
-        <p slot="subtitle">Learn the basics of computer programming, along with algorithms and object-oriented programming through the Java programming language.</p>
+        tags={["Java"]}
+      >
+        <p slot="subtitle">
+          Learn the basics of computer programming, along with algorithms and
+          object-oriented programming through the Java programming language.
+        </p>
 
         <div slot="description">
-          <p>This is the first course in University of Helsinki computer science learning track, and we use industry-grade tooling from day one. As such, the course is about programming in a real integrated development environment (IDE) instead of a browser or an educational IDE. </p>
-          <p>The course is split up into two individual courses: Java Programming I and Java Programming II. Each course consists of seven parts, each with its own exercise set. Completing a single part takes approximately 5-20 hours.</p>
+          <p>
+            This is the first course in University of Helsinki computer science
+            learning track, and we use industry-grade tooling from day one. As
+            such, the course is about programming in a real integrated
+            development environment (IDE) instead of a browser or an educational
+            IDE.
+          </p>
+          <p>
+            The course is split up into two individual courses: Java Programming
+            I and Java Programming II. Each course consists of seven parts, each
+            with its own exercise set. Completing a single part takes
+            approximately 5-20 hours.
+          </p>
         </div>
       </PortfolioItem>
     </section>
