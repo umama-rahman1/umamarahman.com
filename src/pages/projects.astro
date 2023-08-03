@@ -35,10 +35,6 @@ async function getRepoStars(repo: string) {
   }
 }
 
-const starsCount = {
-  binanceBot: await getRepoStars("lukeliasi/binance-dca-bot"),
-  lukeliasi: await getRepoStars("lukeliasi/lukeliasi.com"),
-};
 ---
 
 <DefaultLayout
@@ -84,7 +80,6 @@ const starsCount = {
 
       <PortfolioItem
         sourceCode="https://github.com/Mepha89/Machine-Learning-with-Python"
-        githubStarsCount={starsCount.lukeliasi}
         projectYear="2023"
         title="Machine Learning Projects - (Python, Tensorflow)"
         image="/images/ml-project.png"
