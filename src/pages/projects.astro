@@ -34,7 +34,6 @@ async function getRepoStars(repo: string) {
     console.log(error);
   }
 }
-
 ---
 
 <DefaultLayout
@@ -51,6 +50,31 @@ async function getRepoStars(repo: string) {
     </div>
 
     <section class="projects">
+      <PortfolioItem
+        isOpenSource
+        sourceCode="https://github.com/umama-rahman1/one_day_city_explorer_app"
+        projectYear="2023"
+        title="One Day City Explorer App"
+        image="/images/One-Day-Itinerary.png"
+        tags={["Flutter", "Firebase", "Dart"]}
+      >
+        <p slot="subtitle">
+          This is a Flutter app that allows users to explore activities and
+          attractions they can experience in a day when visiting a specific
+          city.
+        </p>
+
+        <div slot="description">
+          <p>
+            Explore cities effortlessly with this Flutter app powered by Dart
+            and Firebase. Discover attractions seamlessly, thanks to Dart's
+            cross-platform prowess, while Firebase ensures real-time updates and
+            a reliable backend.
+          </p>
+          <p>Your city exploration just got more exciting and user-friendly!</p>
+        </div>
+      </PortfolioItem>
+
       <PortfolioItem
         isOpenSource
         sourceCode="https://github.com/Mepha89/umamarahman.com"

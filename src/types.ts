@@ -30,3 +30,6 @@ export type Skills =
   | "WordPress"
   | "Java"
   | "C++"
+  | "Flutter"
+  | "Dart"
+  | "Firebase"
