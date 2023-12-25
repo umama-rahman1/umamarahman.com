@@ -52,6 +52,34 @@ async function getRepoStars(repo: string) {
     <section class="projects">
       <PortfolioItem
         isOpenSource
+        sourceCode="https://github.com/umama-rahman1/dear_diary_app"
+        projectYear="2023"
+        title="Dear Diary Mobile App"
+        image="/images/Dear-Diary-App.png"
+        tags={["Flutter", "Firebase", "Dart"]}
+      >
+        <p slot="subtitle">
+          This is a Flutter app that allows users to store their thoughts and
+          memories in a diary. With rating and image uploading features.
+        </p>
+
+        <div slot="description">
+          <p>
+            "Dear Diary" is your personal space in the digital world for daily journaling. Built with
+            Flutter and Dart, it lets you easily store, edit, and delete your
+            thoughts and memories. Rate entries, upload images, and enjoy a
+            clean list view. Gain insights with stats like entry count and
+            average ratings. Your memories are safe on Firebase Storage.
+          </p>
+          <p>
+            It's more than a diary—it's a simple, intuitive way to capture and
+            cherish your moments!
+          </p>
+        </div>
+      </PortfolioItem>
+
+      <PortfolioItem
+        isOpenSource
         sourceCode="https://github.com/umama-rahman1/one_day_city_explorer_app"
         projectYear="2023"
         title="One Day City Explorer App"
