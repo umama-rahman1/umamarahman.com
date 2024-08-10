@@ -52,11 +52,21 @@ import TimelineItem from "../components/TimelineItem.astro";
     <div class="timeline-items">
       <TimelineItem
         isCurrent
+        company="Qualcomm"
+        workLocation="Markham, ON"
+        title="AI/DSP Software Engineering Intern"
+        startDate="May 2024"
+        logo="/images/qualcomm.png"
+        responsibilities={[
+          // TBD
+        ]}
+      />
+      <TimelineItem
         company="Canadian Pension Plan Investment Board"
         workLocation="Toronto, ON"
         title="Data Engineering Intern"
-        startDate="Jan 2023"
-        endDate="Apr 2023"
+        startDate="Jan 2024"
+        endDate="Apr 2024"
         logo="/images/cppib.jpeg"
         responsibilities={[
           "Streamlined high-performance big data ingestion by interfacing with Bloomberg SFTP servers (AWS Lambda, S3) and triggering Airflow jobs for transformations and loading (AWS EMR, PySpark, Parquet) into the data warehouse.",
