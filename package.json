@@ -1,7 +1,7 @@
 {
   "name": "umamarahman",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
@@ -24,6 +24,6 @@
     "sass": "1.62.1"
   },
   "engines": {
-    "node": "23.x"
+    "node": "22.x"
   }
 }
