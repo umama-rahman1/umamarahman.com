@@ -7,7 +7,7 @@ import TimelineItem from "../components/TimelineItem.astro";
 
 <DefaultLayout
   documentTitle="About"
-  documentDescription="I'm Umama, a Computer Engineering student based in the Canada with over {yearsInIndustry} years of experience building software."
+  documentDescription="I am Umama Rahman — a Software Developer based in Canada"
 >
   <section class="container">
     <h1 class="main-heading text-swipe-animation" id="greeting">
@@ -15,9 +15,7 @@ import TimelineItem from "../components/TimelineItem.astro";
     </h1>
     <div class="intro">
       <p>
-        I'm Umama, a Computer Engineering student based in the Canada with over {
-          yearsInIndustry
-        } years of experience building software.
+        I am Umama Rahman — a Software Developer based in Canada with over {yearsInIndustry} years of experience developing scalable data platforms, backend systems, and cloud-native applications.
       </p>
     </div>
 
@@ -25,21 +23,18 @@ import TimelineItem from "../components/TimelineItem.astro";
       <img class="profile-photo" src="/images/me.jpg" alt="Umama Rahman" />
       <div class="main-section-text">
         <p>
-          I am a skilled software developer with experience in back-end
-          development, databases, and full-stack application development. I have
-          a strong command over Python, Flask, FastAPI, SQL, and PostgreSQL,
-          enabling me to build powerful APIs and effectively manage data.
+          I specialize in distributed data processing, backend engineering, and cloud infrastructure, with 
+          hands-on experience in Java, Scala, Python, and AWS. I have contributed to large-scale data and performance 
+          engineering projects at Nasdaq Verafin, Qualcomm, and the Canada Pension Plan Investment Board (CPPIB).
         </p>
         <p>
-          I am proficient in technologies like React, AngularJS, NodeJS, and
-          PHP, which allow me to create user-friendly web applications.
-          Additionally, I have hands-on experience with AWS, including
-          Terraform, EKS, and AWS Lambda, where I have successfully set up cloud
-          infrastructure.
+          My work spans data lakehouse design, high-throughput ETL pipelines, and video processing frameworks, 
+          leveraging technologies like Apache Spark, AWS EMR, Terraform, and FastAPI. I am passionate about building reliable, 
+          high-performance systems that turn complex data into actionable insights.
         </p>
         <p>
           With my versatile skill set, I am well-prepared to contribute to
-          software engineering roles.
+          software developer roles.
         </p>
       </div>
     </div>
@@ -51,14 +46,26 @@ import TimelineItem from "../components/TimelineItem.astro";
 
     <div class="timeline-items">
       <TimelineItem
-        isCurrent
+        isCurrent={true}
+        company="Nasdaq"
+        workLocation="Canada"
+        title="Senior Software Developer"
+        startDate="Sep 2025"
+        logo="/images/nasdaq.jpeg"
+        responsibilities={[
+          "Date Lakehouse Team"
+        ]}
+      />
+
+      <TimelineItem
         company="Qualcomm"
         workLocation="Markham, ON"
         title="AI/DSP Software Engineering Intern"
         startDate="May 2024"
+        endDate="Dec 2024"
         logo="/images/qualcomm.png"
         responsibilities={[
-          // TBD
+          "Video Processing Team"
         ]}
       />
       <TimelineItem
@@ -69,10 +76,7 @@ import TimelineItem from "../components/TimelineItem.astro";
         endDate="Apr 2024"
         logo="/images/cppib.jpeg"
         responsibilities={[
-          "Streamlined high-performance big data ingestion by interfacing with Bloomberg SFTP servers (AWS Lambda, S3) and triggering Airflow jobs for transformations and loading (AWS EMR, PySpark, Parquet) into the data warehouse.",
-          "Developed a scalable microservice architecture to collect and process macro data on specific tickers, enabling real-time progress monitoring, SLA breach notifications, and timely data for business investment decisions (CloudWatch, Athena).",
-          "Improved data awareness, quality and monitoring by implementing configurable data checks to onboard new datasets, enabling users to receive automated reports on data readiness and quality issues (EventBridge, CronJob, SNS, DynamoDB).",
-          "Led the Quality Engineering Initiative, increasing unit test coverage to over 50%, implementing automatic code scanning and alerts for best practices, cutting unit test times by half (PyTest, Unit test, SonarQube, GitHub Actions).",
+          "Data Platforms Team"      
         ]}
       />
 
@@ -84,10 +88,7 @@ import TimelineItem from "../components/TimelineItem.astro";
         endDate="Aug 2023"
         logo="/images/cppib.jpeg"
         responsibilities={[
-          "Engineered an automated server-less system (Lambda, API Gateway, Aurora, Terraform) for real-time order checks in a heavily regulated environment. Reduced post-trade review time by 3 days through streamlined compliance checks.",
-          "Enhanced Excel plugin (Python, PyXll, Redis) to deliver hedge fund datasets/risk metrics and complex functions directly into Excel. Pulled data from (MongoDB, NoSQL, MySQL, Athena) databases for precise analysis/decision-making.",
-          "Designed and built backend (Java, Spring Boot, RDS, Gradle) for internal trade order and portfolio analysis tool.",
-          "Created CI/CD pipelines (IBM UrbanCode Deploy, Jenkins) for DEV and UAT environment of new applications onto Linux machines and enhanced overall workflow and streamlined job management (JAMS Scheduler).",
+          "Capital Markets and Factor Investing Team"
         ]}
       />
 
@@ -99,9 +100,7 @@ import TimelineItem from "../components/TimelineItem.astro";
         endDate="Dec 2022"
         logo="/images/cppib.jpeg"
         responsibilities={[
-          "Developed/maintained back-end API (Python, Flask, FastAPI) and leveraged databases (SQL, PostgreSQL) for portfolio performance applications. Used Postman and JSON to interact with endpoints.",
-          "Deployed web applications (Kubernetes, EKS, ArgoCD) and set up ETL tasks for performance attribution calculation tools with AWS services (EC2, Lambda, S3, ELB, Route 53). Certification: AWS - Certified Cloud Practitioner.",
-          "Collaborated with business teams to understand their needs and develop applications to support portfolio management of the company’s public investments by effectively communicating and coordinating with stakeholders (Confluence).",
+          "Public Market Technologies, Active Equities Team ",
         ]}
       />
 
@@ -113,10 +112,8 @@ import TimelineItem from "../components/TimelineItem.astro";
         endDate="Apr 2022"
         logo="/images/achievers.webp"
         responsibilities={[
-          "Debugged and resolved technical issues in front-end (React, AngularJS, NodeJS) and back-end (PHP, MySQL, PostgreSQL) of Achievers platform. Ensured optimal user experience through QA testing.",
-          "Maintained web applications (JavaScript, HTML5, CSS, Docker), enhanced reporting team’s functionalities, and implemented new features with unit testing for improved code quality and reliability.",
-          "Actively engaged in agile software development, including sprint planning, story point estimations, and daily scrum meetings. Collaborated with cross-functional teams to deliver high-quality results with documentation (Jira, Git, Confluence).",
-        ]}
+          "Reporting & Analytics Team",
+         ]}
       />
 
       <TimelineItem
@@ -124,11 +121,10 @@ import TimelineItem from "../components/TimelineItem.astro";
         workLocation="St. John's, NL"
         title="Full-Stack Software Developer (Part-time)"
         startDate="Jan 2022"
+        endDate="Aug 2022"
         logo="/images/faisal.jpeg"
         responsibilities={[
-          "Built GPU allocation tool with MUTEX database (SQLite) for seamless user experience.",
-          "Implemented Python wrapper for efficient utilization of rsync commands on Linux machines.",
-          "Leveraged Bash scripting to allocate permissions on Linux machines, utilizing SQLite database configuration.",
+          "Data Management & Analysis Team",
         ]}
       />
     </div>
