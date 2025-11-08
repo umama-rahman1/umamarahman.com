@@ -51,6 +51,36 @@ async function getRepoStars(repo: string) {
 
     <section class="projects">
       <PortfolioItem
+        projectYear="2024"
+        title="MUN Room"
+        image="/images/MUNroom.png"
+        tags={["Next.js", "MongoDB", "Node.js", "TypeScript"]}
+      >
+        <p slot="subtitle">
+          This is a renter app that helps students find and list rental rooms
+          near Memorial University, with filtering and booking features.
+        </p>
+
+        <div slot="description">
+          <p>
+            "MUN Room" is a student-focused rental platform designed to simplify
+            housing searches around Memorial University. Built as a group
+            project, it features a Node.js backend written in TypeScript and
+            uses MongoDB for efficient data storage and retrieval. Students can
+            browse available rooms, view details, contact landlords, and manage
+            their own listings—all in one place. The app streamlines the rental
+            process, making it easier for students to find affordable
+            accommodation quickly and safely.
+          </p>
+          <p>
+            It is more than just a rental app - it is a community-driven
+            platform for students to connect and find their next home away from
+            home!
+          </p>
+        </div>
+      </PortfolioItem>
+
+      <PortfolioItem
         isOpenSource
         sourceCode="https://github.com/umama-rahman1/dear_diary_app"
         projectYear="2023"
@@ -65,11 +95,12 @@ async function getRepoStars(repo: string) {
 
         <div slot="description">
           <p>
-            "Dear Diary" is your personal space in the digital world for daily journaling. Built with
-            Flutter and Dart, it lets you easily store, edit, and delete your
-            thoughts and memories. Rate entries, upload images, and enjoy a
-            clean list view. Gain insights with stats like entry count and
-            average ratings. Your memories are safe on Firebase Storage.
+            "Dear Diary" is your personal space in the digital world for daily
+            journaling. Built with Flutter and Dart, it lets you easily store,
+            edit, and delete your thoughts and memories. Rate entries, upload
+            images, and enjoy a clean list view. Gain insights with stats like
+            entry count and average ratings. Your memories are safe on Firebase
+            Storage.
           </p>
           <p>
             It's more than a diary—it's a simple, intuitive way to capture and
