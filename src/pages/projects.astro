@@ -51,6 +51,32 @@ async function getRepoStars(repo: string) {
 
     <section class="projects">
       <PortfolioItem
+        projectYear="2025"
+        title="Duckington Inference Microservice (DIM)"
+        image="/images/DIM.png"
+        tags={["Python", "AWS", "C++"]}
+      >
+        <p slot="subtitle">
+            This is a scalable microservice that enables efficient Large Language Model (LLM) inference 
+            using FPGA and GPU hardware in parallel, with both GUI and CLI interfaces.
+        </p>
+
+        <div slot="description">
+          <p>
+          "Duckington Inference Microservice (DIM)" is a Python-based backend system built by Duckington Labs to 
+          explore energy-efficient inference for Large Language Models. With the rising environmental impact of AI 
+          workloads like ChatGPT, Claude, and DeepSeek, DIM provides a greener alternative by integrating FPGA-based 
+          inference alongside traditional GPU inference.
+          <p>
+            The backend, implemented in Python using <code>boto3</code> for AWS integration, allows users to run 
+            and compare FPGA and GPU inference workloads side by side. DIM offers a user-friendly interface through 
+            a Streamlit-based GUI for demonstrations and <code>click</code>-based CLI tool “QuackCLI” for developers 
+            and power users. Together, they provide flexible access to real-time performance and energy efficiency metrics.
+          </p>
+        </div>
+      </PortfolioItem>
+
+      <PortfolioItem
         projectYear="2024"
         title="MUN Room"
         image="/images/MUNroom.png"
