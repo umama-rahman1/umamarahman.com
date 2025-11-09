@@ -34,3 +34,6 @@ packages/**/e2e/**/fixtures/**/.astro/
 packages/**/e2e/**/fixtures/**/env.d.ts
 examples/**/.astro/
 examples/**/env.d.ts
+
+# astro dev server temp files
+.astro/
